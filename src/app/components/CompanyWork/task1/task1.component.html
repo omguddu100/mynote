@@ -1,0 +1,16 @@
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="control-form">
+            <input  type="text"  [(ngModel)]="searchkey" class="form-control">
+        </div>
+    </div>
+    <div class="col-md-8"><button class="btn btn-success">Search</button></div>
+</div>
+<ul class="list mt-2" >
+    <li *ngFor="let key of users | find: searchkey">
+       <div style="color:#009688;"> {{key.date}}</div>
+        <small class="m-2">open: {{key.open}}</small> | <small>closed: {{key.close}}</small>
+    </li>
+</ul>

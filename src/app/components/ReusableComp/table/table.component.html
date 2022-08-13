@@ -1,0 +1,20 @@
+<h2 class="red">{{c_title}}</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Adress</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr appHighlight  [color]="'green'" *ngFor="let key of child_data;">
+            <td >{{key.name}}</td>
+            <td>{{key.address}}</td>
+            <td>
+                <button class="btn sm btn-success">add</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
